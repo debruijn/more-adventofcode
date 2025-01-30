@@ -1,0 +1,11 @@
+### Files to ignore
+*/ignore*
+local/*
+
+# Ignore example data if I have that copied from the website for live days when aocd is not yet working for examples
+# - or for languages where I can't make it work otherwise then putting it in the same folder
+*/*exampledata*
+*/*_data*
+
+### JetBrains specific
+.idea
