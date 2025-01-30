@@ -21,14 +21,13 @@ const run = function() {
         .map(x => parseInt(x))
         .filter(x => !isNaN(x));
 
+    // Get results using `fuel` function with recursive off and on
     const result_part1 = input
         .map(x => fuel(x, false))
         .reduce((a, b) => a + b, 0);
     const result_part2 = input
         .map(x => fuel(x, true))
         .reduce((a, b) => a + b, 0)
-
-    // Get answers and print them
 
     return [result_part1, result_part2];
 }
