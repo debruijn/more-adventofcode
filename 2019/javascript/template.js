@@ -13,7 +13,7 @@ const run = function() {
     // Process input here to something useful
     console.log(input.length)
 
-    // Get results using `fuel` function with recursive off and on
+    // Get results
     const resultPart1 = 'TODO'
     const resultPart2 = 'TODO'
 
