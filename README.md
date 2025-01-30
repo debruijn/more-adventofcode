@@ -16,3 +16,9 @@ languages, such as a visual HTML solution in Javascript, or a brute force soluti
 ## Status per year
 - 2018: Partially done in Rust in my other repo - I will in future include it in here and finish it
 - 2019: In progress for JavaScript
+
+## Note in usage
+In case you want to run my code, a warning: it will be less plug-and-play as my other repo where you can just run
+the code as long as you have properly setup aocd and authentication. In this repository, I will be referring to my
+cache folder from the other project for my input files, and each language will have its own way for doing that, so no
+promises about me following proper procedures for a specific language.
