@@ -1,8 +1,9 @@
 const fs = require('fs');
 
-// Read data
-let filename = 'input/2019_01_input.txt'
-let input = fs.readFileSync(filename, {encoding: 'utf8', flag: 'r'});
+const read_input = function(year, day) {
+    let filename = 'input/' + year + '_' + day + '_input.txt'
+    return fs.readFileSync(filename, {encoding: 'utf8', flag: 'r'})
+}
 
 // Utility function to calc fuel, directly or recursively
 const fuel = function(x, recursive=false) {
@@ -10,17 +11,40 @@ const fuel = function(x, recursive=false) {
     return answer <= 0 ? 0 : recursive ? answer + fuel(answer, true) : answer;
 }
 
-// Process input to integers and drop final line if there
-input = input.split('\n')
-    .map(x => parseInt(x))
-    .filter(x => !isNaN(x));
+const run = function() {
 
-// Get answers and print them
-console.log('Answer for part 1: ' + input
-    .map(x => fuel(x, false))
-    .reduce((a, b) => a + b, 0)
-);
-console.log('Answer for part 2: ' + input
-    .map(x => fuel(x, true))
-    .reduce((a, b) => a + b, 0)
-);
+    // Read data
+    let input = read_input(2019, '01');
+
+    // Process input to integers and drop final line if there
+    input = input.split('\n')
+        .map(x => parseInt(x))
+        .filter(x => !isNaN(x));
+
+    const result_part1 = input
+        .map(x => fuel(x, false))
+        .reduce((a, b) => a + b, 0);
+    const result_part2 = input
+        .map(x => fuel(x, true))
+        .reduce((a, b) => a + b, 0)
+
+    // Get answers and print them
+
+    return [result_part1, result_part2];
+}
+
+
+const print_res = function(res) {
+    console.log('Answer for part 1: ' + res[0]);
+    console.log('Answer for part 2: ' + res[1]);
+}
+
+
+const run_and_time = function(run) {
+    console.time('Run function run-time')
+    const res = run();
+    print_res(res);
+    console.timeEnd('Run function run-time')
+}
+
+run_and_time(run);
