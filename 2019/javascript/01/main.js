@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const read_input = function(year, day) {
+const readInput = function(year, day) {
     let filename = 'input/' + year + '_' + day + '_input.txt'
     return fs.readFileSync(filename, {encoding: 'utf8', flag: 'r'})
 }
@@ -14,7 +14,7 @@ const fuel = function(x, recursive=false) {
 const run = function() {
 
     // Read data
-    let input = read_input(2019, '01');
+    let input = readInput(2019, '01');
 
     // Process input to integers and drop final line if there
     input = input.split('\n')
@@ -22,28 +22,28 @@ const run = function() {
         .filter(x => !isNaN(x));
 
     // Get results using `fuel` function with recursive off and on
-    const result_part1 = input
+    const resultPart1 = input
         .map(x => fuel(x, false))
         .reduce((a, b) => a + b, 0);
-    const result_part2 = input
+    const resultPart2 = input
         .map(x => fuel(x, true))
         .reduce((a, b) => a + b, 0)
 
-    return [result_part1, result_part2];
+    return [resultPart1, resultPart2];
 }
 
 
-const print_res = function(res) {
+const printRes = function(res) {
     console.log('Answer for part 1: ' + res[0]);
     console.log('Answer for part 2: ' + res[1]);
 }
 
 
-const run_and_time = function(run) {
+const runAndTime = function(run) {
     console.time('Run function run-time')
     const res = run();
-    print_res(res);
+    printRes(res);
     console.timeEnd('Run function run-time')
 }
 
-run_and_time(run);
+runAndTime(run);

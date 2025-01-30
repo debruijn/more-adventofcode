@@ -46,10 +46,10 @@ const run = function() {
         .map(x => parseInt(x));
 
     // Get results utility functions
-    const result_part1 = getOutput(input.slice(), 12, 2);
-    const result_part2 = completeGravityAssist(input);
+    const resultPart1 = getOutput(input.slice(), 12, 2);
+    const resultPart2 = completeGravityAssist(input);
 
-    return [result_part1, result_part2];
+    return [resultPart1, resultPart2];
 }
 
 
