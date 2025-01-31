@@ -17,6 +17,12 @@ languages, such as a visual HTML solution in Javascript, or a brute force soluti
 - 2018: Partially done in Rust in my other repo - I will in future include it in here and finish it
 - 2019: In progress for JavaScript
 
+Future languages that I am considering to use for other years:
+- R - especially since the `coding quest` track I did in R was so short
+- PostgreSQL - people have been doing AoC in SQL and I am wondering how difficult that would be - it would surely
+  level up my SQL-fu!
+- Dusting off some of the languages I used to use in the distant past, like Java, C++ and Matlab
+
 ## Note in usage
 In case you want to run my code, a warning: it will be less plug-and-play as my other repo where you can just run
 the code as long as you have properly setup aocd and authentication. In this repository, I will be referring to my
