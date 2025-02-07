@@ -10,7 +10,7 @@ export default [
             }
         },
         rules: {
-            'no-console': ['error', { allow: ['warn', 'error'] }], // Allow console.warn and console.error
+            'no-console': ['error', { allow: ['warn', 'error', 'log', 'time', 'timeEnd'] }], // Allow console.warn and console.error
             'no-unused-vars': [
                 'off',
                 {
