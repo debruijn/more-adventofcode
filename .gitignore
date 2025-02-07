@@ -10,3 +10,7 @@ input
 
 ### JetBrains specific
 .idea
+
+## JS files
+node_modules
+.husky
