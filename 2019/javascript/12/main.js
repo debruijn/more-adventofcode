@@ -65,8 +65,14 @@ const run = function () {
                 .toArray()[0]
     )
 
-    let potEnergy = moonsLoc.keys().map(_ => 0).toArray(),
-        kinEWnergy = moonsLoc.keys().map(_ => 0).toArray()
+    let potEnergy = moonsLoc
+            .keys()
+            .map((_) => 0)
+            .toArray(),
+        kinEWnergy = moonsLoc
+            .keys()
+            .map((_) => 0)
+            .toArray()
     for (let j of moonsLoc.keys()) {
         for (let i of [0, 1, 2]) {
             potEnergy[j] += Math.abs(parseInt(statesPart1[i].split(';')[0].split(',')[j]))
