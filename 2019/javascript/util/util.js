@@ -17,8 +17,8 @@ const runAndTime = function (run) {
     console.timeEnd('Run function run-time')
 }
 
-const gcd = (a, b) => a ? gcd(b % a, a) : b;
+const gcd = (a, b) => (a ? gcd(b % a, a) : b)
 
-const lcm = (a, b) => a * b / gcd(a, b);
+const lcm = (a, b) => (a * b) / gcd(a, b)
 
-export { readInput, printRes, runAndTime, gcd, lcm}
+export { readInput, printRes, runAndTime, gcd, lcm }
