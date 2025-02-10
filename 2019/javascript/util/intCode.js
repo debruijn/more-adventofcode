@@ -124,14 +124,14 @@ class intCodePC {
     }
 
     readVal(loc) {
-        return loc <= this.data.length ? this.data[loc] : this.dataExtra.has(loc) ? this.dataExtra.get(loc) : 0
+        return loc < this.data.length ? this.data[loc] : this.dataExtra.has(loc) ? this.dataExtra.get(loc) : 0
     }
 
     writeVal(val, loc, mode = 0) {
         if (mode === 2) {
             loc += this.relBase
         }
-        if (loc > this.data.length) {
+        if (loc >= this.data.length) {
             this.dataExtra.set(loc, val)
         } else {
             this.data[loc] = val
