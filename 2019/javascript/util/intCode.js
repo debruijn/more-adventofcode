@@ -214,7 +214,7 @@ class intCodePC {
 
     runUntilEnd(input = undefined) {
         this.setInput(input)
-        this.stop = false
+        this.stop = [false, 0, 1, 2, 3, 4][0]
         this.stopAtOutput = false
 
         while (!this.stop) {
