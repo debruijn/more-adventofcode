@@ -1,4 +1,4 @@
-DAY=15
+DAY=16
 
 create_day_folder:
 	mkdir ${DAY}
